@@ -5,6 +5,20 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+Route::get('alertas', 'AlertasController@getList');
+Route::get('alertas/create', 'AlertasController@getCreate');
+Route::post('alertas/store', 'AlertasController@postStore');
+Route::get('alertas/edit/{id}', 'AlertasController@getEdit');
+Route::put('alertas/update/{id}', 'AlertasController@putUpdate');
+Route::delete('alertas/destroy/{id}', 'AlertasController@deleteDestroy');
+
+Route::get('personas', 'PersonasController@getList');
+Route::get('personas/create', 'PersonasController@getCreate');
+Route::post('personas/store', 'PersonasController@postStore');
+Route::get('personas/edit/{id}', 'PersonasController@getEdit');
+Route::delete('personas/destroy/{id}', 'AlertasController@deleteDestroy');
+
+
 
 Route::get('nueva_alerta', function()
 {

@@ -62,12 +62,8 @@ Class AlertasController extends \BaseController {
 
     // Enviar SMS
     $smsc->addNumero(260,154036357);
-    $smsc->addNumero(260,154558293);
     $smsc->addNumero(260,154061093);
-    $smsc->addNumero(260,154681438);
-    $smsc->addNumero(260,154048855);
-    $smsc->addNumero(260,154031788);
-    $smsc->addNumero(260,154822617);
+
     $smsc->setMensaje('Seguridad Vecinal: Desde:'.Input::get('ale_ubicacion').'----Mensaje:'.Input::get('ale_mensaje'));
     if ($smsc->enviar())
         echo 'Mensaje enviado.';
